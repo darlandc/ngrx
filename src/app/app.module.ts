@@ -5,7 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { appReducer } from './store/app.state';
-import { StoreModule } from '@ngrx/store'
+import { StoreModule } from '@ngrx/store';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { StoreModule } from '@ngrx/store'
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    HttpClientModule,
     StoreModule.forRoot({ app: appReducer})
   ],
   providers: [],

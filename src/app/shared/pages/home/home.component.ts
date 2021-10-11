@@ -23,10 +23,4 @@ export class HomeComponent implements OnInit {
     this.store.dispatch(decrement())
   }
 
-
-  defineAction(value: string){
-    const convertedValue = parseFloat(value);
-    // this.store.dispatch(define(convertedValue))
-  }
-
 }

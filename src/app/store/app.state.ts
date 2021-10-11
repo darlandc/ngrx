@@ -2,10 +2,12 @@ import { createAction, createReducer, on, props } from '@ngrx/store';
 
 export interface IAppState {
   counter: number;
+  episodes: Array<any>;
 }
 
 export const appInitialState: IAppState = {
   counter: 0,
+  episodes: []
 };
 
 export const increment = createAction('[App] increment');
@@ -13,6 +15,10 @@ export const decrement = createAction('[App] decrement');
 export const defineCount = createAction(
   '[App] define count',
   props<{ payload: number }>()
+);
+export const setEpisodes = createAction(
+  '[App] set episodes',
+  props<{ payload: Array<any> }>()
 );
 
 export const appReducer = createReducer(
@@ -36,6 +42,14 @@ export const appReducer = createReducer(
       ...state,
       counter: payload,
     };
+    return state;
+  }),
+  on(setEpisodes, (state, { payload }) => {
+    state = {
+      ...state,
+      episodes: payload,
+    };
+    console.log(state, 'setEpisodes')
     return state;
   })
 );
