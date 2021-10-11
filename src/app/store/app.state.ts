@@ -20,6 +20,7 @@ export const setEpisodes = createAction(
   '[App] set episodes',
   props<{ payload: Array<any> }>()
 );
+export const loadingEpisodes = createAction('[App] load episodes');
 
 export const appReducer = createReducer(
   appInitialState,
