@@ -6,3 +6,7 @@
 <div style="width: 100%; text-align: center;">
   <app-counter-display [counter]="($counter | async) || 0"></app-counter-display>
 </div>
+
+<div style="width: 100%; text-align: center;">
+  <app-counter-input [counter]="($counter | async) || 0"></app-counter-input>
+</div>
