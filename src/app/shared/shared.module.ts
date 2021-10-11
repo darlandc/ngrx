@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [ HomeComponent],
+  declarations: [ HomeComponent, CounterDisplayComponent],
   imports: [ CommonModule ],
-  exports: [ HomeComponent],
+  exports: [ HomeComponent, CounterDisplayComponent],
   providers: [],
 })
 export class SharedModule {}

@@ -1,5 +1,8 @@
 <div style="width: 100%; text-align: center;">
-  <h2>{{ counter }}</h2>
-  <button (click)="counter = counter + 1">+</button>
-  <button (click)="counter = counter === 0 ? 0 : counter - 1">-</button>
+  <h2>{{ $counter | async }}</h2>
+  <button (click)="incrementAction()">+</button>
+  <button (click)="decrementAction()">-</button>
+</div>
+<div style="width: 100%; text-align: center;">
+  <app-counter-display [counter]="($counter | async) || 0"></app-counter-display>
 </div>
