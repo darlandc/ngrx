@@ -31,15 +31,15 @@ export class ListEpisodesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.api.fetchData().subscribe({
-    //   next: (res) => {
-    //     this.episodes = res.results;
-    //     this.store.dispatch(
-    //       setEpisodes({
-    //         payload: res,
-    //       })
-    //     );
-    //   },
-    // });
+    this.api.fetchData().subscribe({
+      next: (res) => {
+        this.episodes = res.results;
+        this.store.dispatch(
+          setEpisodes({
+            payload: res,
+          })
+        );
+      },
+    });
   }
 }
